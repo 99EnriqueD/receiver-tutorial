@@ -22,7 +22,7 @@ We don't want the game to start right away when the micro:bit turns on.
 We want a countdown so that the game starts fairly. 
 
 To do this we need two ``||logic:boolean||`` (do you remember what this means?) ``||variables:variables||``.
-We will name these variables ``||variables:countdown_started||" (which is ``||logic:true||`` after the teacher has started the game countdown) and ``variables||game_started||`` (``||logic:true||`` when the game has actually started).
+We will name these variables ``||variables:countdown_started||`` (which is ``||logic:true||`` after the teacher has started the game countdown) and ``||variables:game_started||`` (``||logic:true||`` when the game has actually started).
 
 ```blocks
 radio.setGroup(5)
@@ -49,6 +49,7 @@ function finish_game () {
 
 Now call these functions in the ``||basic:on start||`` block in the right order.
 Look for this in the ``||functions:Functions||`` blocks after you have created the functions!
+
 
 ## Pre-countdown 1
 
@@ -80,7 +81,7 @@ function wait_for_teacher () {
 ## Pre-countdown 3
 
 Before we move on, the micro:bit must now know what to do when the teacher presses the A and B buttons.
-We do this by making a new ``||input:on button pressed||`` block of code. Change the button to listen to from ``||inputs:A||`` to ``||inputs:A+B||``.
+We do this by making a new ``||input:on button pressed||`` block of code. Change the button to listen to from ``||input:A||`` to ``||input:A+B||``.
 
 ```blocks
 input.onButtonPressed(Button.AB, function () {
@@ -193,12 +194,12 @@ function finish_game () {
 Test your program. 
 Press the A and B buttons on your real or virtual micro:bit at the same time and check that the program does all things you have told it to do.
 If something doesn't go right, try to find the problem in your program or ask the teacher. 
-Finding these problems is called "debugging" and professional programmers need to do it all the time so don't be discouraged!
+Finding these problems is called "debugging". Professional programmers also make mistakes and need to debug need to do it all the time so don't be discouraged!
 
 ## Endgame 3
 
 Are we all done? So close! We forgot to listen for the radio transmissions of the student micro:bits.
-Let's add a ``||radio:on radio received name value||`` block.
+Let's add a ``||radio:on radio received||`` ``||variables:name||`` ``||variables:value||``  block.
 
 ```blocks
 radio.onReceivedValue(function (name, value) {
