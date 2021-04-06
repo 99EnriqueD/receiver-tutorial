@@ -99,26 +99,30 @@ input.onButtonPressed(Button.AB, function () {
 })
 ```
 
-## Gameplay 1
+## Pre-countdown 5
 
-We are now ready to add blocks to the "play_game" function.
-We can perform the countdown easily by showing a string message.
+We can now finish the "wait_for_teacher" function. 
+Once ``||variables:countdown_started||`` is set to ``||logic:True||``, the ``||loops:while||`` loop will stop.
+So after the ``||loops:while||`` loop let's start a countdown by displaying a string message. 
 Go ahead now and try to start the game in your virtual micro:bit!
 
 ```blocks
-function play_game () {
+function wait_for_teacher () {
+    while (!(countdown_started)) {
+        basic.showString("Start: A+B")
+    }
     basic.showString("3 2 1 GO!")
 }
 ```
 
-## Gameplay 2
+## Gameplay 1
 
-After this countdown the game has officially started. How can we show this in the program?
+We are now ready to add blocks to the "play_game" function.
+Here the game has officially started. How can we show this in the program?
 Think back to the ``||variables:game_started||`` variable we made at the start of the lesson...
 
 ```blocks
 function play_game () {
-    basic.showString("3 2 1 GO!")
     game_started = true
 }
 ```
@@ -132,7 +136,6 @@ How many seconds are in a minute?
 
 ```blocks
 function play_game () {
-    basic.showString("3 2 1 GO!")
     game_started = true
     for (let index = 0; index <= 60; index++) {
     }
@@ -147,7 +150,6 @@ The ``||basic:pause||`` will pause for a certain amount of ``ms``, what does thi
 
 ```blocks
 function play_game () {
-    basic.showString("3 2 1 GO!")
     game_started = true
     for (let index = 0; index <= 60; index++) {
         basic.pause(1000)
@@ -159,10 +161,10 @@ function play_game () {
 
 Let's have the teacher's micro:bit show how close to the end of the game we are.
 We'll do this by using a ``||led:plot bar graph||`` like we did in the lesson about our own micro:bits.
+Put the ``||led:plot bar graph||`` in the ``||Loops:for||`` loop.
 
 ```blocks
 function play_game () {
-    basic.showString("3 2 1 GO!")
     game_started = true
     for (let index = 0; index <= 60; index++) {
         led.plotBarGraph(
@@ -194,7 +196,7 @@ function finish_game () {
 Test your program. 
 Press the A and B buttons on your real or virtual micro:bit at the same time and check that the program does all things you have told it to do.
 If something doesn't go right, try to find the problem in your program or ask the teacher. 
-Finding these problems is called "debugging". Professional programmers also make mistakes and need to debug need to do it all the time so don't be discouraged!
+Finding these problems is called "debugging". Professional programmers also make mistakes and need to debug all the time so don't be discouraged!
 
 ## Endgame 3
 
@@ -222,6 +224,7 @@ radio.onReceivedValue(function (name, value) {
 
 The last thing we need to do is record the measurements of each team. 
 For now you should just look at the hint and place the code in your program. 
+Don't forget that the ``||variables:name||`` and ``||variables:value||`` variables can be draged from the top of the ``||radio:on radio received||`` block
 You will discover what this does after the challenge is done.
 Hopefully you're as excited as I am! But for now, you're all done. Great job!
 
