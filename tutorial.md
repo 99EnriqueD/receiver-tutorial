@@ -231,8 +231,7 @@ Hopefully you're as excited as I am! But for now, you're all done. Great job!
 ```blocks
 radio.onReceivedValue(function (name, value) {
     if (game_started) {
-        graph_id = "a." + name
-        serial.writeValue(graph_id, value)
+        serial.writeValue(name, value)
     }
 })
 ```

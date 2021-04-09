@@ -14,8 +14,7 @@ input.onButtonPressed(Button.AB, function () {
 })
 radio.onReceivedValue(function (name, value) {
     if (game_started) {
-        graph_id = "a." + name
-        serial.writeValue(graph_id, value)
+        serial.writeValue(name, value)
     }
 })
 function play_game () {
@@ -30,7 +29,6 @@ function play_game () {
     }
 }
 let game_duration = 0
-let graph_id = ""
 let game_started = false
 let countdown_started = false
 radio.setGroup(5)
