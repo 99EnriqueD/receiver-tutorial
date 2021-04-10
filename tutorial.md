@@ -68,33 +68,33 @@ function wait_for_teacher () {
 ## Pre-countdown 2
 
 Now in this ``||Loops:while||`` loop we will have the micro:bit display a string message that let's the teacher know how to start the game.
-Otherwise they won't know what to do since they didn't program the micro:bit! Let's have the game start when the teacher presses the A and B button at the same time.
+Otherwise they won't know what to do since they didn't program the micro:bit! Let's have the game start when the teacher presses the A button.
 
 ```blocks
 function wait_for_teacher () {
     while (!(countdown_started)) {
-        basic.showString("Start: A+B")
+        basic.showString("A")
     }
 }
 ```
 
 ## Pre-countdown 3
 
-Before we move on, the micro:bit must now know what to do when the teacher presses the A and B buttons.
-We do this by making a new ``||input:on button pressed||`` block of code. Change the button to listen to from ``||input:A||`` to ``||input:A+B||``.
+Before we move on, the micro:bit must now know what to do when the teacher presses the A button.
+We do this by making a new ``||input:on button pressed||`` block of code.
 
 ```blocks
-input.onButtonPressed(Button.AB, function () {
+input.onButtonPressed(Button.A, function () {
 })
 ```
 
 ## Pre-countdown 4
 
-In this ``||input:on button A+B pressed||`` block we now need to tell the program that the countdown should start.
+In this ``||input:on button A pressed||`` block we now need to tell the program that the countdown should start.
 How can we do this? Think back to the ``||variables:countdown_started||`` variable we made at the start of the lesson...
 
 ```blocks
-input.onButtonPressed(Button.AB, function () {
+input.onButtonPressed(Button.A, function () {
     countdown_started = true
 })
 ```
@@ -109,7 +109,7 @@ Go ahead now and try to start the game in your virtual micro:bit!
 ```blocks
 function wait_for_teacher () {
     while (!(countdown_started)) {
-        basic.showString("Start: A+B")
+        basic.showString("A")
     }
     basic.showString("3 2 1 GO!")
 }
@@ -194,13 +194,13 @@ function finish_game () {
 ## Endgame 2
 
 Test your program. 
-Press the A and B buttons on your real or virtual micro:bit at the same time and check that the program does all things you have told it to do.
+Press the A button on your real or virtual micro:bit and check that the program does all the things you have programmed it to do.
 If something doesn't go right, try to find the problem in your program or ask the teacher. 
 Finding these problems is called "debugging". Professional programmers also make mistakes and need to debug all the time so don't be discouraged!
 
 ## Endgame 3
 
-Are we all done? So close! We forgot to listen for the radio transmissions of the student micro:bits.
+Are we all done? So close! We still need to listen for the radio transmissions of the student micro:bits.
 Let's add a ``||radio:on radio received||`` ``||variables:name||`` ``||variables:value||``  block.
 
 ```blocks
@@ -223,10 +223,9 @@ radio.onReceivedValue(function (name, value) {
 ## Endgame 5
 
 The last thing we need to do is record the measurements of each team. 
-For now you should just look at the hint and place the code in your program. 
-Don't forget that the ``||variables:name||`` and ``||variables:value||`` variables can be draged from the top of the ``||radio:on radio received||`` block
-You will discover what this does after the challenge is done.
-Hopefully you're as excited as I am! But for now, you're all done. Great job!
+Use the ``||serial:serial write value||`` block for this. It will remember all data given to it and plot it on a graph for you!
+Don't forget that the ``||variables:name||`` and ``||variables:value||`` variables can be dragged from the top of the ``||radio:on radio received||`` block
+Now we're all done, hopefully you're as excited as I am! Great job!
 
 ```blocks
 radio.onReceivedValue(function (name, value) {
