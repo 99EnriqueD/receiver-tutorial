@@ -9,7 +9,7 @@
 ## Custom blocks
 
 ```blocks
-radio.radio_propeller("", 0)
+radio_.radio_propeller("", 0)
 ```
 
 
