@@ -6,12 +6,6 @@
 [(Previous) Sender tutorial](https://makecode.microbit.org/#tutorial:github:99enriqued/sender-tutorial/tutorial)
 [(This) Receiver tutorial](receiver-tutorial/tutorial) [start](https://makecode.microbit.org/#tutorial:github:99enriqued/receiver-tutorial/tutorial)
 
-## Custom blocks
-
-```blocks
-networkRadio.radio_propeller("", 0)
-```
-
 
 ## Use as Extension
 
