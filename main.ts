@@ -12,6 +12,7 @@ function wait_for_teacher () {
 input.onButtonPressed(Button.A, function () {
     countdown_started = true
 })
+
 radio.onReceivedValue(function (name, value) {
     if (game_started) {
         serial.writeValue(name, value)
