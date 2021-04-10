@@ -5,11 +5,11 @@ function finish_game () {
 }
 function wait_for_teacher () {
     while (!(countdown_started)) {
-        basic.showString("Start: A+B")
+        basic.showString("A")
     }
     basic.showString("3 2 1 GO!")
 }
-input.onButtonPressed(Button.AB, function () {
+input.onButtonPressed(Button.A, function () {
     countdown_started = true
 })
 radio.onReceivedValue(function (name, value) {
