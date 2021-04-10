@@ -13,7 +13,6 @@ As you probably remember, we do this with the ``||radio:radio set group||`` bloc
 
 ```blocks
 radio.setGroup(5)
-radioCustom.radio_propeller("", 0)
 ```
 
 ## Setup 2
