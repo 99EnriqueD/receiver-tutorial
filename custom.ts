@@ -7,7 +7,7 @@
  * Custom radio blocks
  */
 //% weight=100 color=#FF1493 
-namespace radio {
+namespace radioCustom {
     
     /**
      * Transmits a value respresenting the propellers voltage over the radio.
