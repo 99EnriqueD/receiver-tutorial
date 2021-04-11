@@ -3,8 +3,7 @@
 ## Welcome
 
 Hello! In this lesson we will be programming the central micro:bits which will collect data from all students teams during the challenge. 
-If you have not yet followed the student/sender tutorial, do so [here](https://makecode.microbit.org/#tutorial:github:99enriqued/sender-tutorial/tutorial).
-This tutorial is a little more advanced but I'm sure you can do it! Be sure to ask your teacher if you get stuck.
+
 
 ## Setup 1
 

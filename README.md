@@ -3,10 +3,9 @@
 
 ## Tutorials
 
-[(Previous) Sender tutorial](https://makecode.microbit.org/#tutorial:github:99enriqued/sender-tutorial/tutorial)
-
 [(This) Receiver tutorial](receiver-tutorial/tutorial) [start](https://makecode.microbit.org/#tutorial:github:99enriqued/receiver-tutorial/tutorial)
 
+[(Next) Sender tutorial](https://makecode.microbit.org/#tutorial:github:99enriqued/sender-tutorial/tutorial)
 
 ## Use as Extension
 
