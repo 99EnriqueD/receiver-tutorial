@@ -224,7 +224,6 @@ radio.onReceivedValue(function (name, value) {
 The last thing we need to do is record the measurements of each team. 
 Use the ``||serial:serial write value||`` block for this. It will remember all data given to it and plot it on a graph for you!
 Don't forget that the ``||variables:name||`` and ``||variables:value||`` variables can be dragged from the top of the ``||radio:on radio received||`` block
-Now we're all done, hopefully you're as excited as I am! Great job!
 
 ```blocks
 radio.onReceivedValue(function (name, value) {
@@ -233,6 +232,13 @@ radio.onReceivedValue(function (name, value) {
     }
 })
 ```
+
+## Finished
+
+Now we're all done with programming the central micro:bit for the challenge. Great job!
+I look forward to seeing you for the lesson on programming the student's micro:bits [here](https://makecode.microbit.org/#tutorial:github:99enriqued/sender-tutorial/tutorial).
+
+
 
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
 
