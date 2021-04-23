@@ -8,7 +8,7 @@ Hello! In this lesson we will be programming the central micro:bits which will c
 ## Setup 1
 
 First, we need to set our radio group correctly so that we are listening to the right micro:bits. 
-As you probably remember, we do this with the ``||radio:radio set group||`` block.
+We do this with the ``||radio:radio set group||`` block.
 
 ```blocks
 radio.setGroup(5)
