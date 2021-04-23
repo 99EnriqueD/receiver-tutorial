@@ -7,7 +7,7 @@ Hallo! In deze begginerscursus gaan wij de centrale micro:bit programmeren. Deze
 ## Setup 1
 
 Eerst gaan we onze radio zend groep juist instellen zodat wij naar de juiste micro:bits gaan luisteren.
-Wij doen dit door de ``||radio:Radio instellen groep||``
+Wij doen dit door de ``||radio:Radio instellen groep||`` te gebruiken.
 
 ```blocks
 radio.setGroup(5)
