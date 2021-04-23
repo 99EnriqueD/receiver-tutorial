@@ -140,7 +140,7 @@ function play_game () {
 }
 ```
 
-## Gameplay 3
+## Gameplay 2
 
 The game has started and should last one minute. 
 We will make a ``||Loops:for||`` loop which has its own ``||variables:index||`` variable. 
@@ -155,7 +155,7 @@ function play_game () {
 }
 ```
 
-## Gameplay 4
+## Gameplay 3
 
 To make the ``||Loops:for||`` loop repeat once every second, we need to ``||basic:pause||`` the program for a second. 
 Otherwise the micro:bit repeat the loop as fast as it can which is a lot faster than one repition every second! 
@@ -170,7 +170,7 @@ function play_game () {
 }
 ```
 
-## Gameplay 5
+## Gameplay 4
 
 Let's have the teacher's micro:bit show how close to the end of the game we are.
 We'll do this by using a ``||led:plot bar graph||`` like we did in the lesson about our own micro:bits.
