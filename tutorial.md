@@ -20,19 +20,18 @@ Since this is the central micro:bit, it controls when the game starts.
 We don't want the game to start right away when the micro:bit turns on. 
 We want a countdown so that the game starts fairly. 
 
-To do this we need two ``||logic:boolean||`` (do you remember what this means?) ``||variables:variables||``.
+To do this we need two boolean ``||variables:variables||`` (``||logic:true||`` or ``||logic:false||``).
 We will name these variables ``||variables:countdown_started||`` (which is ``||logic:true||`` after the teacher has started the game countdown) and ``||variables:game_started||`` (``||logic:true||`` when the game has actually started).
 
 ```blocks
 radio.setGroup(5)
 let countdown_started = false
 let game_started = false
-
 ```
 
 ## Setup 3
 
-Before we program anymore, let's first make some ``||functions:functions||`` to seperate our code blocks so that our program is easier to understand.
+Let's first make some ``||functions:functions||`` to seperate our code blocks so that our program is easier to understand.
 Make a "wait_for_teacher", a "play_game", and a "finish_game" function.
 
 ```blocks
@@ -49,12 +48,27 @@ function finish_game () {
 Now call these functions in the ``||basic:on start||`` block in the right order.
 Look for this in the ``||functions:Functions||`` blocks after you have created the functions!
 
+```blocks
+radio.setGroup(5)
+let countdown_started = false
+let game_started = false
+wait_for_teacher()
+play_game()
+finish_game()
+
+function wait_for_teacher () {
+}
+function play_game () {
+}
+function finish_game () {
+}
+```
 
 ## Pre-countdown 1
 
 Let us start by adding blocks to the "wait_for_teacher" function. 
 Here we will tell the teacher that they need to do something to officially start the game.
-This message must be repeated until it the countdown is started. 
+This message must be shown until the countdown is started. 
 Use a ``||Loops:while||`` loop and use your ``||variables:countdown_started||`` variable as the condition.
 
 ```blocks
