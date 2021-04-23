@@ -2,7 +2,7 @@
 
 ## Welkom
 
-Hallo! In deze begginerscursus gaan wij de centrale micro:bit programmeren. Deze zal data collecteren van alle studenten teams tijdens het spel.
+Hallo! In deze begginerscursus gaan wij de centrale micro:bit programmeren. Deze zal data collecteren van alle studenten teams tijdens het IoTeach spel.
 
 ## Setup 1
 

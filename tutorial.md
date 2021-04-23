@@ -2,7 +2,7 @@
 
 ## Welcome
 
-Hello! In this lesson we will be programming the central micro:bits which will collect data from all students teams during the challenge. 
+Hello! In this lesson we will be programming the central micro:bits which will collect data from all students teams during the IoTeach challenge. 
 
 
 ## Setup 1
