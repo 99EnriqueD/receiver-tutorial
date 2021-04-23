@@ -173,7 +173,7 @@ function play_game () {
 ## Gameplay 4
 
 Let's have the teacher's micro:bit show how close to the end of the game we are.
-We'll do this by using a ``||led:plot bar graph||`` like we did in the lesson about our own micro:bits.
+We'll do this by using a ``||led:plot bar graph||``. 
 Put the ``||led:plot bar graph||`` in the ``||Loops:for||`` loop.
 
 ```blocks
