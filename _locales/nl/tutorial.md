@@ -2,7 +2,7 @@
  
 ## Welkom
  
-Hallo! In deze beginnerscursus gaan we de centrale micro:bit van de leerkracht programmeren. Deze zal data verzamelen van alle teams tijdens het IoTeach spel.
+Hallo! In deze beginnerscursus gaan we de centrale micro:bit van de leerkracht programmeren. Deze zal het IoTeach spel controleren en data verzamelen van alle teams tijdens het spel. 
  
 ## Setup 1
  
@@ -244,14 +244,3 @@ Nu zijn we klaar met het programmeren van de centrale micro:bit van het spel. Fa
 Ik kijk uit naar de programmeer cursus van de studenten micro:bit die jij [hier](https://makecode.microbit.org/#tutorial:github:99enriqued/sender-tutorial/tutorial) kan maken!
  
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
- 
- 
- 
- 
- 
- 
- 
- 
-
-
-
