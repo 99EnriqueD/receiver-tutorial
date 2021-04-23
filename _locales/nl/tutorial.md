@@ -25,7 +25,7 @@ let spel_begonnen = false
 
 ## Setup 3
 
-Om ons programma overzichtelijk te houden gaan wij ``||functions:functie||`` blokken maken. Maak een "wacht_voor_start", een "spel_spelen", en een "spel_eindigen" functie.
+Om ons programma overzichtelijk te houden gaan wij ``||functions:functie||`` blokken maken. Maak een ``||functions:wacht_voor_start||``, een ``||functions:spel_spelen||``, en een ``||functions:spel_eindigen||`` functie.
 
 ```blocks
 function wacht_voor_start () {
@@ -58,7 +58,7 @@ function spel_eindigen () {
 
 ## Pre-countdown 1
 
-Wij gaan nu blokken in de "wacht_voor_start" functie toevoegen. 
+Wij gaan nu blokken in de ``||functions:wacht_voor_start||`` functie toevoegen. 
 Hier zullen we de gebruiker van de micro:bit dat ze iets moeten doen vooraleer het spel begint.
 Dit bericht moet getoont worden totdat de countdown begint.
 Gebruik hiervoor een  ``||Loops:while||`` lus en gebruik jouw ``||variables:countdown_begonnen||`` variabel in de conditie.
@@ -88,7 +88,7 @@ function wait_voor_start () {
 ## Pre-countdown 3
 
 De micro:bit moet nu weten wat te doen wanneer de gebruiker op de "A" knop drukt. 
-Om hieraan te beginnen voegen we een nieuw blok toe, ``||input:code uitvoeren wanneer knop A wordt ingedrukt||``.
+Om hieraan te beginnen voegen we een nieuw blok toe, ``||input:wanneer knop A wordt ingedruk||``.
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
@@ -97,7 +97,7 @@ input.onButtonPressed(Button.A, function () {
 
 ## Pre-countdown 4
 
-In de  ``||input:code uitvoeren wanneer knop A wordt ingedrukt||`` blok moeten wij nu ervoor zorgen dat de countdown begint.
+In de  ``||input:wanneer knop A wordt ingedruk||`` blok moeten wij nu ervoor zorgen dat de countdown begint.
 Hoe doen wij dat juist? Denk terug naar de ``||variables:countdown_begonnen||`` variabel die we in het begin van deze les gemaakt hadden...
 
 ```blocks
@@ -108,7 +108,7 @@ input.onButtonPressed(Button.A, function () {
 
 ## Pre-countdown 5
 
-Nu kunnen wij de "wacht_voor_start" functie afmaken.
+Nu kunnen wij de ``||functions:wacht_voor_start||`` functie afmaken.
 Eens dat de ``||variables:countdown_started||`` variabel ``||logic:waar||`` is, zal de ``||Loops:while||`` lus stoppen.
 Daarom kunnen wij na de ``||Loops:while||`` lus de countdown tonen. Gebruik hiervoor de ``||basic:toon tekens||`` blok.
 Bekijk gerust de hint als je vast zit!
@@ -183,7 +183,7 @@ function spel_spelen () {
 
 ## Eindspel 1
 
-Nadat de ``||Loops:for||`` lus klaar is in de "spel_spelen" functie zal de "spel_eindigen" functie opgeroepen worden.
+Nadat de ``||Loops:for||`` lus klaar is in de ``||functions:spel_spelen||`` functie zal de ``||functions:spel_eindigen||`` functie opgeroepen worden.
 Ik geloof dat je deze blok helemaal alleen kan programmeren! 
 Je moet hier een variabel aanpassen om ervoor te zorgen dat de programma weet dat het spel geeindigd is en dan een bericht tonen naar de gebruiker van de micro:bit.
 Bekijk gerust de hint als je vast zit.
@@ -207,7 +207,7 @@ Geen zorgen maken, dit hoort bij programmeren!
 
 Zijn we klaar? Bijna!
 De micro:bit moet weten wat te doen wanneer die radio-uitzendingen krijgt van de andere micro:bits tijdens het spel.
-Laten we een nieuwe ``||radio:code uitvoeren wanneer de radio ontvangt||`` ``||variables:name||`` ``||variables:value||`` blok toevoegen.
+Laten we een nieuwe ``||radio:wanneer de radio ontvangt||`` ``||variables:name||`` ``||variables:value||`` blok toevoegen.
 
 ```blocks
 radio.onReceivedValue(function (name, value) {
@@ -216,7 +216,7 @@ radio.onReceivedValue(function (name, value) {
 
 ## Endgame 4 
 
-De ``||radio:code uitvoeren wanneer de radio ontvangt||`` blok luistert constant voor radio-uitzendingen van de radio groep die we in het begin ingestelled hebben. Eigenlijk moeten wij enkel code uitvoeren wanneer het spel gestart is.
+De ``||radio:wanneer de radio ontvangt||`` blok luistert constant voor radio-uitzendingen van de radio groep die we in het begin ingestelled hebben. Eigenlijk moeten wij enkel code uitvoeren wanneer het spel gestart is.
 Voeg een ``||logic:if||`` blok toe met een gepaste conditie.
 
 ```blocks
@@ -230,7 +230,7 @@ radio.onReceivedValue(function (name, value) {
 
 Het allerlaatste dat jij nog moet doen is data van de verschillende micro:bits opslaan wanneer wij die ontvangen.
 Gebruik de ``||serial:serieel schrijf waarde||`` blok hiervoor. Die zal alle waardes die het krijgt opslaan en plotten!
-Vergeet niet dat de ``||variables:name||`` en ``||variables:value||`` variabelen van de ``||radio:code uitvoeren wanneer de radio ontvangt||`` blok gesleept kunnen worden.
+Vergeet niet dat de ``||variables:name||`` en ``||variables:value||`` variabelen van de ``||radio:wanneer de radio ontvangt||`` blok gesleept kunnen worden.
 
 ```blocks
 radio.onReceivedValue(function (name, value) {
