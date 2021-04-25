@@ -7,7 +7,7 @@ Hallo! In deze beginnerscursus gaan we de centrale micro:bit van de leerkracht p
 ## Setup 1
  
 Eerst gaan we onze radio zend groep juist instellen zodat we naar de juiste micro:bits gaan luisteren.
-Wij doen dit door de ``||radio:Radio instellen groep||`` te gebruiken.
+Wij doen dit door het ``||radio:Radio instellen groep||`` blok te gebruiken.
  
 ```blocks
 radio.setGroup(5)
@@ -38,7 +38,7 @@ function spel_beëindigen () {
  
 ## Setup 4
  
-Wij gaan onze functies oproepen in de ``||basic:bij opstarten||`` blok in de juiste volgorde. Kijk hiervoor door de ``||functions:Functies||`` blokken!
+Wij gaan onze functies oproepen in het ``||basic:bij opstarten||`` blok in de juiste volgorde. Kijk hiervoor door de ``||functions:Functies||`` blokken!
  
 ```blocks
 radio.setGroup(5)
@@ -59,7 +59,7 @@ function spel_beëindigen () {
 ## Pre-countdown 1
  
 Wij gaan nu blokken in de ``||functions:wacht_op_start||`` functie toevoegen. 
-Hier zullen ervoor zorgen dat de gebruiker van de micro:bit iets zal moeten doen vooraleer het spel begint.
+Hier zullen we ervoor zorgen dat de gebruiker van de micro:bit iets zal moeten doen vooraleer het spel begint.
 Dit bericht moet getoond worden totdat de countdown begint.
 Gebruik hiervoor een  ``||Loops:while||`` lus en gebruik jouw ``||variables:countdown_begonnen||`` variabel in de conditie.
  
@@ -75,7 +75,7 @@ function wacht_op_start  () {
  
 Nu gaan wij binnen de ``||Loops:while||`` lus een bericht tonen dat vertelt hoe dat het spel gestart moet worden.
 De gebruiker van jouw micro:bit zal de leerkracht zijn maar die heeft niets van de micro:bit geprogrammeerd dus deze stap is belangrijk zodat zij/hij weet wat ze moeten doen!
-Wij willen dat het spel begint door op de "A" knop te drukken. Gebruik hiervoor de ``||basic:toon tekens||`` blok.
+Wij willen dat het spel begint door op de "A" knop te drukken. Gebruik hiervoor het ``||basic:toon tekens||`` blok.
  
 ```blocks
 function wacht_op_start () {
@@ -97,7 +97,7 @@ input.onButtonPressed(Button.A, function () {
  
 ## Pre-countdown 4
  
-In de  ``||input:wanneer knop A wordt ingedrukt||`` blok moeten we er nu voor zorgen dat de countdown begint.
+In het  ``||input:wanneer knop A wordt ingedrukt||`` blok moeten we er nu voor zorgen dat de countdown begint.
 Hoe doen we dat weer? Denk terug naar de ``||variables:countdown_begonnen||`` variabele die we in het begin van deze les gemaakt hadden...
  
 ```blocks
@@ -110,7 +110,7 @@ input.onButtonPressed(Button.A, function () {
  
 Nu kunnen we de ``||functions:wacht_voor_start||`` functie afmaken.
 Eens dat de ``||variables:countdown_started||`` variabele ``||logic:waar||`` is, zal de ``||Loops:while||`` lus stoppen.
-Daarom kunnen we na de ``||Loops:while||`` lus de countdown tonen. Gebruik hiervoor de ``||basic:toon tekens||`` blok.
+Daarom kunnen we na de ``||Loops:while||`` lus de countdown tonen. Gebruik hiervoor het ``||basic:toon tekens||`` blok.
 Bekijk gerust de hint als je vast zit!
  
 ```blocks
@@ -148,7 +148,7 @@ function spel_spelen () {
  
 ## Gameplay 3
  
-Om ervoor te zorgen dat de ``||Loops:for||`` lus maar een keer per seconde loopt moeten we een pauze van een seconde inlassen. Anders zal het spel veel minder dan een minuut lopen omdat de micro:bit veel sneller de lus zal overlopen! De ``||basic:pauzeer||`` blok zal het spel pauzeren voor een aantal milliseconden (``ms``), hoeveel milliseconden zitten er ook weer in een seconde?
+Om ervoor te zorgen dat de ``||Loops:for||`` lus maar een keer per seconde loopt moeten we een pauze van een seconde inlassen. Anders zal het spel veel minder dan een minuut lopen omdat de micro:bit veel sneller de lus zal overlopen! Het ``||basic:pauzeer||`` blok zal het spel pauzeren voor een aantal milliseconden (``ms``), hoeveel milliseconden zitten er ook weer in een seconde?
 ```blocks
 function spel_spelen () {
     spel_begonnen = true
@@ -161,8 +161,8 @@ function spel_spelen () {
 ## Gameplay 4
  
 Het zou handig zijn moest de micro:bit ons kunnen vertellen hoe lang het spel nog zal duren.
-Hiervoor kunnen wij de ``||led: plot staafdiagram||`` blok gebruiken. 
-Denk goed na over welke waarden we in deze blok gaan plaatsen. 
+Hiervoor kunnen wij het ``||led: plot staafdiagram||`` blok gebruiken. 
+Denk goed na over welke waarden we in dit blok gaan plaatsen. 
 Zet deze in de ``||Loops:for||`` lus. 
  
  
@@ -182,7 +182,7 @@ function spel_spelen () {
 ## Eindspel 1
  
 Nadat de ``||Loops:for||`` lus klaar is in de ``||functions:spel_spelen||`` functie zal de ``||functions:spel_eindigen||`` functie opgeroepen worden.
-Ik geloof dat je deze blok helemaal alleen kunt programmeren! 
+Ik geloof dat je dit blok helemaal alleen kunt programmeren! 
 Je moet hier een variabele aanpassen om ervoor te zorgen dat het programma weet dat het spel geëindigd is en een bericht tonen aan de gebruiker dat het spel geëindigd is.
 Bekijk gerust de hint als je vast zit.
  
@@ -197,7 +197,7 @@ function spel_eindigen () {
 ## Eindspel 2
  
 Test jouw programma. 
-Druk op de "A" knop op de virtuele of echte micro:bit en controleer dat je programma doet wat het zou moet doen.
+Druk op de "A" knop op de virtuele of echte micro:bit en controleer dat je programma doet wat het zou moeten doen.
 Als iets onverwacht gebeurt, probeer dan het probleem zelf op te lossen of vraag de leerkracht om hulp.
 Maak je geen zorgen, dit hoort bij programmeren!
  
@@ -227,8 +227,8 @@ radio.onReceivedValue(function (name, value) {
 ## Endgame 5
  
 Het allerlaatste dat jij nog moet doen is de data van de verschillende micro:bits opslaan wanneer we die ontvangen.
-Gebruik de ``||serial:serieel schrijf waarde||`` blok hiervoor. Die zal alle waardes die het krijgt opslaan en in een grafiek zetten!
-Vergeet niet dat de ``||variables:name||`` en ``||variables:value||`` variabelen van de ``||radio:wanneer de radio ontvangt||`` blok gesleept kunnen worden.
+Gebruik het ``||serial:serieel schrijf waarde||`` blok hiervoor. Die zal alle waardes die het krijgt opslaan en in een grafiek zetten!
+Vergeet niet dat de ``||variables:name||`` en ``||variables:value||`` variabelen van het ``||radio:wanneer de radio ontvangt||`` blok gesleept kunnen worden.
  
 ```blocks
 radio.onReceivedValue(function (name, value) {
